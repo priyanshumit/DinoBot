@@ -25,7 +25,10 @@ with mss.mss() as sct:
         # cv2.imshow("OpenCV/Numpy normal", img1)
 
         # Display FPS of game
-        print("fps: {}".format(1 / (time.time() - last_time)))
+        try:
+          print("fps: {}".format(1 / (time.time() - last_time)))
+        except:
+            print("...")
 
         img1 = img2
 
